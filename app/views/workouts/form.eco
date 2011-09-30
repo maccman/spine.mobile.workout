@@ -1,0 +1,23 @@
+<form>
+  <select name="type" size="1" required>
+    <option value="">Select workout type:</option>
+    <% for type in @types: %>
+      <option value="<%= type %>"><%= type.capitalize() %></option>
+    <% end %>
+  </select>
+  
+  <select name="stringMinutes" size="1" required>
+    <option value="">Select minutes:</option>
+    <option value="5">5 minutes</option>
+    <option value="10">10 minutes</option>
+    <option value="15">15 minutes</option>
+    <option value="20">20 minutes</option>
+    <option value="30">30 minutes</option>
+    <option value="45">45 minutes</option>
+    <option value="60">1 hour</option>
+    <option value="120">2 hours</option>
+    <option value="180">3 hours</option>
+  </select>
+  
+  <input name="stringDate" type="date" required value="<%= @today.toDashString() %>" max="<%= @today.toDashString() %>">
+</form>

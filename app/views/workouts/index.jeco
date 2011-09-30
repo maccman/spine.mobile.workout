@@ -1,0 +1,5 @@
+<div class="item">
+  <span class="type"><%= @type.capitalize() %></span>
+  <span class="minutes">for <%= @minutes %> mins</span>
+  <span class="date">on <%= @date.toDateString() %></span>
+</div>
