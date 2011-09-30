@@ -1,0 +1,24 @@
+body,html{height:100%}
+.viewport{position:relative;}
+.viewport > *{position:absolute;left:0;right:0;top:0;bottom:0;}
+.viewport > *:not(.active){display:none}
+body.stage > header{position:absolute;left:0;top:0;right:0}
+body.stage > article{position:absolute;left:0;right:0;top:0;bottom:0}
+body.stage > footer{position:absolute;left:0;bottom:0;right:0}
+.panel{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;}
+.panel > article{-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;overflow:auto;-webkit-overflow-scrolling:touch}
+body{font-family:Helvetica Neue,Helvetica,Arial,sans-serif;overflow-x:hidden;-webkit-user-select:none;margin:0;padding:0;color:#292d39;background:#fff}
+*{-webkit-tap-highlight-color:rgba(0,0,0,0.00)}
+body.stage > header{height:40px;background:-webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,0.30)),color-stop(.5,rgba(255,255,255,0.10)),color-stop(.5,rgba(255,255,255,0.00))),-webkit-gradient(linear,left top,left bottom,from(#7189a6),to(#6a83a1));border-bottom:1px solid #2d3033}
+.panel > header{height:40px;line-height:40px;}
+.panel > header h2{margin:0;padding:0;text-align:center;color:#fffeff;text-shadow:0 -1px 0 #5e6771;font-weight:normal}
+.panel > header button{position:absolute;left:0;top:0;color:#fff;text-shadow:0 -1px 0 rgba(0,0,0,0.50);font-size:13px;background:-webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,0.30)),color-stop(.5,rgba(255,255,255,0.10)),color-stop(.5,rgba(255,255,255,0.00))),#476b9d;-webkit-box-shadow:inset 0 -1px 1px rgba(0,0,0,0.30),inset 0 1px 1px 0 rgba(0,0,0,0.50),0 1px 0 rgba(255,255,255,0.40);margin:7px;padding:5px 12px;border:0;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;}
+.panel > header button:active{-webkit-box-shadow:inset 0 -1px 1px rgba(0,0,0,0.30),inset 0 1px 1px 0 rgba(0,0,0,0.60),0 1px 0 rgba(255,255,255,0.40),inset 0 0 20px rgba(255,255,255,0.20)}
+.panel > header button.right{left:auto;right:0}
+.panel.list .item{height:44px;line-height:44px;padding:0 10px;border-bottom:1px solid #e0e0e0;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}
+body.landscape::after{content:"Portrait only mode supported";font-size:16px;position:absolute;left:0;right:0;top:0;bottom:0;text-align:center;padding:15%;background:rgba(255,255,255,0.90)}
+.panel.workouts.list > article .item .minutes{font-weight:bold}
+.panel.workouts.create > article{background:#b4bec5;}
+.panel.workouts.create > article form{margin:10px;padding:20px;background:#fff;border:1px solid #aeaeae;-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px}
+.panel.workouts.create > article select,.panel.workouts.create > article input{display:block;margin:0 0 15px 0;width:100%;font-size:15px;}
+.panel.workouts.create > article select:last-child,.panel.workouts.create > article input:last-child{margin-bottom:0}
