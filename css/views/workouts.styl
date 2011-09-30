@@ -5,6 +5,13 @@
         // float: right
         font-weight: bold
         
+    &:empty::after
+      display: block
+      content: 'Empty...'
+      text-align: center
+      margin: 30% 0
+      color: darken(#e0e0e0, 20%)
+        
   &.create > article
     background: #b4bec5
     
