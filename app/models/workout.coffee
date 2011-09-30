@@ -4,13 +4,7 @@ class Workout extends Spine.Model
   @configure 'Workout', 'type', 'minutes', 'date'
   
   @extend Spine.Model.Local
-    
-  stringDate: (value) ->
-    @date = Date.parseDashString(value)
-    
-  stringMinutes: (value) ->
-    @minutes = parseFloat(value)
-    
+
   load: ->
     super
     @date = new Date(Date.parse(@date))
@@ -18,5 +12,6 @@ class Workout extends Spine.Model
   validate: ->    
     return 'type required' unless @type
     return 'minutes required' unless @minutes
+    return 'date required' unless @date
   
 module.exports = Workout

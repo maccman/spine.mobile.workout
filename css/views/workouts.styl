@@ -10,16 +10,25 @@
     
     form
       margin: 10px
-      padding: 20px
       background: #FFF
       border: 1px solid #aeaeae
       border-radius(10px)
+      box-shadow(0, 1px 1px, rgba(0, 0, 0, 0.1))
+      
+    label
+      display: block
+      border-bottom: 1px solid #aeaeae
+      font-size: 13px
+      padding: 15px
+      
+      &:last-child
+        border-bottom: none
+        
+      span::after
+        content: ':'
       
     select, input
       display: block
-      margin: 0 0 15px 0
       width: 100%
       font-size: 15px
-      
-      &:last-child
-        margin-bottom: 0
+      margin: 5px 0 0 0

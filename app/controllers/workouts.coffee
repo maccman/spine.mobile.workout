@@ -18,7 +18,7 @@ class WorkoutsCreate extends Panel
   constructor: ->
     super
     @addButton('Back', @back)
-    @addButton('Create', -> @form.submit()).addClass('right')
+    @addButton('Create', @create).addClass('right')
     @active -> @render()
 
   render: ->
@@ -29,17 +29,18 @@ class WorkoutsCreate extends Panel
     
   create: (e) ->
     e.preventDefault()
-    data = @form.serializeForm()
-    item = new Workout(data)
-    if item.save()
-      @back()
-    else
-      @delay ->
-        alert(item.validate().capitalize())
+    item = Workout.create(@formData())
+    @back() if item
     
   back: ->
     @form.blur()
     @navigate('/workouts', trans: 'left')
+    
+  formData: ->
+    type    = @form.find('[name=type]').val()
+    minutes = parseInt(@form.find('[name=minutes]').val())
+    date    = @form.find('[name=date]')[0].valueAsDate
+    {type: type, minutes: minutes, date: date}
 
 class WorkoutsList extends Panel
   title: 'Workouts'
