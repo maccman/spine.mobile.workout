@@ -1,7 +1,7 @@
 Spine   = require('spine')
 {Panel} = require('spine.mobile')
 
-Workout = require('models/workout')
+Workout     = require('models/workout')
 WorkoutType = require('models/workout_type')
 
 class WorkoutsCreate extends Panel
